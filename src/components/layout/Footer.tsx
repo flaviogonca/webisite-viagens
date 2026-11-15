@@ -32,7 +32,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col gap-3 py-6 text-xs text-mist md:flex-row md:justify-between">
           <p>© {new Date().getFullYear()} {agency.name}. Todos os direitos reservados.</p>
-          <p className="flex gap-5"><Link className="hover:text-saffron" to="/privacidade">Política de privacidade</Link><Link className="hover:text-saffron" to="/termos">Termos e condições</Link></p>
+          <p className="flex gap-5"><Link className="hover:text-saffron" to="/privacidade">Política de privacidade</Link><Link className="hover:text-saffron" to="/termos">Termos e condições</Link><Link className="hover:text-saffron" to="/creditos">Créditos das imagens</Link></p>
         </div>
       </div>
     </footer>

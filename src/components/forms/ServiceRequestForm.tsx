@@ -11,10 +11,10 @@ import { Button } from '@/components/ui/Button'
 import { Field, inputCls, SubmitState } from './Field'
 import type { ServiceId } from '@/types'
 
-export function ServiceRequestForm({ defaultService }: { defaultService?: ServiceId }) {
+export function ServiceRequestForm({ defaultService, defaultDestination }: { defaultService?: ServiceId; defaultDestination?: string }) {
   const { register, handleSubmit, reset, getValues, formState: { errors, isSubmitting } } = useForm<FormValues>({
     resolver: zodResolver(serviceRequestSchema),
-    defaultValues: { serviceType: defaultService, travelers: 1, residenceCountry: 'Angola' },
+    defaultValues: { serviceType: defaultService, travelers: 1, residenceCountry: 'Angola', destinationCountry: defaultDestination ?? '' },
   })
   const [state, setState] = useState<{ status: 'idle' | 'error' | 'success'; message: string }>({ status: 'idle', message: '' })
 

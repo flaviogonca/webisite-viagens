@@ -10,6 +10,7 @@ const DestinationDetails = lazy(() => import('@/pages/DestinationDetails'))
 const VisaAssistance = lazy(() => import('@/pages/VisaAssistance'))
 const Contact = lazy(() => import('@/pages/Contact'))
 const RequestService = lazy(() => import('@/pages/RequestService'))
+const Credits = lazy(() => import('@/pages/Credits'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 const Privacy = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Privacy })))
 const Terms = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Terms })))
@@ -30,6 +31,7 @@ export const router = createBrowserRouter([
       { path: 'solicitar-servico', element: wrap(<RequestService />) },
       { path: 'privacidade', element: wrap(<Privacy />) },
       { path: 'termos', element: wrap(<Terms />) },
+      { path: 'creditos', element: wrap(<Credits />) },
       { path: '*', element: wrap(<NotFound />) },
     ],
   },

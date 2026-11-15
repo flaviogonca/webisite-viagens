@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { DestinationArt } from '@/components/art/DestinationArt'
 import type { Destination } from '@/types'
-import { cn } from '@/utils/cn'
+import { Tilt } from '@/components/ui/Tilt'
 
 export function DestinationCard({ d, className }: { d: Destination; className?: string }) {
   return (
-    <Link to={`/destinos/${d.slug}`} className={cn('group relative block overflow-hidden rounded-sm bg-marine text-fog', className)}>
+    <Tilt className={className}><Link to={`/destinos/${d.slug}`} className="group relative block h-full overflow-hidden rounded-sm bg-marine text-fog">
       <div className="absolute inset-0 transition-transform duration-[900ms] ease-[var(--ease-out-expo)] group-hover:scale-105">
         {d.image ? <img src={d.image} alt="" loading="lazy" className="h-full w-full object-cover" /> : <DestinationArt art={d.art} className="h-full w-full" />}
       </div>
@@ -17,6 +17,6 @@ export function DestinationCard({ d, className }: { d: Destination; className?: 
         <p className="mt-2 max-w-[32ch] text-sm text-fog/85">{d.tagline}</p>
         <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold">Explorar destino <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden /></span>
       </div>
-    </Link>
+    </Link></Tilt>
   )
 }

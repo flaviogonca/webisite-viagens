@@ -1,7 +1,28 @@
-node_modules
-dist
-.env
-.env.local
-.playwright-mcp
+# Dependências e build
+node_modules/
+dist/
 *.tsbuildinfo
+.vite/
+
+# Variáveis de ambiente (usar .env.example como modelo)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editores e sistema
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Ferramentas locais
+.playwright-mcp/
 .claude/settings.local.json
+
+# Fotografias originais em alta resolução (não vão para o site)
+assets-source/

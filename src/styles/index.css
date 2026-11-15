@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque/index.css';
+@import '@fontsource-variable/hanken-grotesk/index.css';
+
+@theme {
+  --color-marine: #0b2a33;
+  --color-marine-2: #123d49;
+  --color-sea: #1f6f78;
+  --color-mist: #9ec3c6;
+  --color-fog: #eef1ee;
+  --color-paper: #f7f9f7;
+  --color-saffron: #e9b44c;
+  --color-saffron-deep: #b9811c;
+  --color-ink: #0d1f24;
+  --color-line: #d5ddda;
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Hanken Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }
+::selection { background: var(--color-saffron); color: var(--color-marine); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+.container-x { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: 1.25rem; }
+@media (min-width: 768px) { .container-x { padding-inline: 2rem; } }
+.section-y { padding-block: clamp(4rem, 9vw, 8rem); }
+.h-display { font-size: clamp(2.6rem, 7.2vw, 6rem); line-height: 0.98; font-weight: 700; }
+.h-section { font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.04; font-weight: 650; }
+.lead { font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.6; max-width: 56ch; }
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin-slow 28s linear infinite; }
+@keyframes drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+.art-far { fill: var(--far); }
+.art-near { fill: var(--near); }

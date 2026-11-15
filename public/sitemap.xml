@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc></url>
+  <url><loc>https://www.example.com/sobre</loc></url>
+  <url><loc>https://www.example.com/servicos</loc></url>
+  <url><loc>https://www.example.com/destinos</loc></url>
+  <url><loc>https://www.example.com/destinos/portugal</loc></url>
+  <url><loc>https://www.example.com/destinos/franca</loc></url>
+  <url><loc>https://www.example.com/destinos/espanha</loc></url>
+  <url><loc>https://www.example.com/destinos/dubai</loc></url>
+  <url><loc>https://www.example.com/destinos/reino-unido</loc></url>
+  <url><loc>https://www.example.com/destinos/estados-unidos</loc></url>
+  <url><loc>https://www.example.com/destinos/brasil</loc></url>
+  <url><loc>https://www.example.com/vistos</loc></url>
+  <url><loc>https://www.example.com/contactos</loc></url>
+  <url><loc>https://www.example.com/solicitar-servico</loc></url>
+</urlset>
